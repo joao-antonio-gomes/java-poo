@@ -1,6 +1,8 @@
 package Account;
 
-public class CurrentAccount extends Account {
+import Employee.Dutiable;
+
+public class CurrentAccount extends Account implements Dutiable {
     public CurrentAccount(int agency, int number) {
         super(agency, number);
     }
@@ -19,5 +21,10 @@ public class CurrentAccount extends Account {
     public void withdraw(double amount) {
         double amountWithTax = amount + 0.2;
         super.withdraw(amountWithTax);
+    }
+
+    @Override
+    public double getDutyValue() {
+        return super.getFunds() * 0.01;
     }
 }
