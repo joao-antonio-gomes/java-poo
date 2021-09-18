@@ -44,11 +44,11 @@ public class Account {
     }
 
     public boolean validateTransaction(double amount) {
-        if (!(amount > 0)) {
+        if (amount <= 0) {
             System.out.println("You must enter a valid number!");
             return false;
         }
-        if (!(this.funds >= amount)) {
+        if (this.funds < amount) {
             System.out.println("You didn't has this amount in your bank account!");
             return false;
         }
@@ -56,7 +56,8 @@ public class Account {
     }
 
     public void deposit(double amount) {
-        if (!validateTransaction(amount)) {
+        if (amount <= 0) {
+            System.out.println("You must enter a valid number!");
             return;
         }
         this.funds += amount;
@@ -73,7 +74,7 @@ public class Account {
         if (!validateTransaction(amount)) {
             return;
         }
-        this.funds -= amount;
+        this.withdraw(amount);
         account.deposit(amount);
     }
 }
