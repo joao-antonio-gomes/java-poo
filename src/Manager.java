@@ -6,6 +6,6 @@ public class Manager extends Employee {
     }
 
     public double getBonus() {
-        return super.getBonus() + super.getPayment();
+        return 150;
     }
 }

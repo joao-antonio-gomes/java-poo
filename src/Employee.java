@@ -3,9 +3,7 @@ public abstract class Employee {
     private String cpf;
     private double payment;
     
-    public double getBonus() {
-        return this.payment * 0.1;
-    }
+    public abstract double getBonus();
     
     public String getName() {
         return name;
