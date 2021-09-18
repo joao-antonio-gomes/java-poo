@@ -2,15 +2,20 @@ package Employee;
 
 public class Customer implements AuthPerson {
     private String name;
-    private int password;
+    private AuthenticatorUtil authenticator;
 
-    @Override
-    public void setPassword(int password) {
-        this.password = password;
+
+    public Customer() {
+        this.authenticator = new AuthenticatorUtil();
     }
 
     @Override
-    public boolean authenticate(int senha) {
-        return this.password == senha;
+    public void setPassword(int password) {
+        this.authenticator.setPassword(password);
+    }
+
+    @Override
+    public boolean authenticate(int password) {
+        return this.authenticator.authenticate(password);
     }
 }
