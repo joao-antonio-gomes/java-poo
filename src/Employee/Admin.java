@@ -1,9 +1,9 @@
 package Employee;
 
-public class Manager extends EmployeeAuth {
+public class Admin extends EmployeeAuth {
 
     @Override
     public double getBonus() {
-        return 150;
+        return 50;
     }
 }
