@@ -5,7 +5,7 @@ public class Manager extends Employee {
         return this.password == senha;
     }
 
-    public double getBonification() {
-        return super.getBonification() + super.getPayment();
+    public double getBonus() {
+        return super.getBonus() + super.getPayment();
     }
 }

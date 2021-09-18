@@ -3,7 +3,7 @@ public class Employee {
     private String cpf;
     private double payment;
     
-    public double getBonification() {
+    public double getBonus() {
         return this.payment * 0.1;
     }
     
