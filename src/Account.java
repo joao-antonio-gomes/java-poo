@@ -1,4 +1,4 @@
-public class Account {
+public abstract class Account {
     private double funds;
     private int agency;
     private int number;
@@ -13,6 +13,10 @@ public class Account {
 
     public double getFunds() {
         return funds;
+    }
+
+    public void setFunds(double funds) {
+        this.funds = funds;
     }
 
     public int getAgency() {
@@ -46,32 +50,26 @@ public class Account {
     public boolean validateTransaction(double amount) {
         if (amount <= 0) {
             System.out.println("You must enter a valid number!");
-            return false;
+            return true;
         }
         if (this.funds < amount) {
             System.out.println("You didn't has this amount in your bank account!");
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
-    public void deposit(double amount) {
-        if (amount <= 0) {
-            System.out.println("You must enter a valid number!");
-            return;
-        }
-        this.funds += amount;
-    }
+    public abstract void deposit(double amount);
 
     public void withdraw(double amount) {
-        if (!validateTransaction(amount)) {
+        if (validateTransaction(amount)) {
             return;
         }
         this.funds -= amount;
     }
 
     public void transfer(Account account, double amount) {
-        if (!validateTransaction(amount)) {
+        if (validateTransaction(amount)) {
             return;
         }
         this.withdraw(amount);

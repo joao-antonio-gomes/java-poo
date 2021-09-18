@@ -6,6 +6,7 @@ public class TestAccount {
         DepositAccount da = new DepositAccount(222, 222);
         da.deposit(200);
 
-
+        System.out.println(ca.getFunds());
+        System.out.println(da.getFunds());
     }
 }
