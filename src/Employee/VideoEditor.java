@@ -1,3 +1,5 @@
+package Employee;
+
 public class VideoEditor extends Employee {
 
     public void editingVideo() {

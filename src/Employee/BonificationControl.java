@@ -1,3 +1,5 @@
+package Employee;
+
 public class BonificationControl {
     private double total;
 

@@ -1,3 +1,5 @@
+package Employee;
+
 public class Manager extends Employee {
     private int password;
 

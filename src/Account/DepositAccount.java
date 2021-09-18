@@ -1,5 +1,7 @@
-public class CurrentAccount extends Account {
-    public CurrentAccount(int agency, int number) {
+package Account;
+
+public class DepositAccount extends Account {
+    public DepositAccount(int agency, int number) {
         super(agency, number);
     }
 
@@ -11,11 +13,5 @@ public class CurrentAccount extends Account {
         }
         double accountAmount = this.getFunds();
         this.setFunds(accountAmount += amount);
-    }
-
-    @Override
-    public void withdraw(double amount) {
-        double amountWithTax = amount + 0.2;
-        super.withdraw(amountWithTax);
     }
 }
