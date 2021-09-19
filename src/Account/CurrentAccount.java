@@ -18,9 +18,9 @@ public class CurrentAccount extends Account implements Dutiable {
     }
 
     @Override
-    public void withdraw(double amount) {
+    public boolean withdraw(double amount) {
         double amountWithTax = amount + 0.2;
-        super.withdraw(amountWithTax);
+        return super.withdraw(amountWithTax);
     }
 
     @Override

@@ -49,31 +49,23 @@ public abstract class Account {
         return accountAmount;
     }
 
-    public boolean validateTransaction(double amount) {
-        if (amount <= 0) {
-            System.out.println("You must enter a valid number!");
-            return true;
-        }
-        if (this.funds < amount) {
-            System.out.println("You didn't has this amount in your bank account!");
-            return true;
-        }
-        return false;
-    }
-
     public abstract void deposit(double amount);
 
-    public void withdraw(double amount) {
-        if (validateTransaction(amount)) {
-            return;
+    public boolean withdraw(double amount) {
+        if (amount <= 0) {
+            throw new InvalidAmountException("You must enter a valid number!");
+        }
+        if (this.funds < amount) {
+            throw new InsufficientAmountException
+                    ("You didn't has this amount in your bank account!" +
+                            "\nFunds: " + this.funds +
+                            "\nAmount to withdraw: " + amount);
         }
         this.funds -= amount;
+        return true;
     }
 
     public void transfer(Account account, double amount) {
-        if (validateTransaction(amount)) {
-            return;
-        }
         this.withdraw(amount);
         account.deposit(amount);
     }
