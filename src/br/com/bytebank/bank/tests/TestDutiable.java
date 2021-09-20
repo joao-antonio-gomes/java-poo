@@ -1,6 +1,8 @@
-package Employee;
+package br.com.bytebank.bank.tests;
 
-import Account.CurrentAccount;
+import br.com.bytebank.bank.modelo.Account.CurrentAccount;
+import br.com.bytebank.bank.modelo.Employee.DutyCalculator;
+import br.com.bytebank.bank.modelo.Employee.LifeInsurance;
 
 public class TestDutiable {
     public static void main(String[] args) {

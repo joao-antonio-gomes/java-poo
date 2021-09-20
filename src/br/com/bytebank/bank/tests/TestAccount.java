@@ -1,4 +1,7 @@
-package Account;
+package br.com.bytebank.bank.tests;
+
+import br.com.bytebank.bank.modelo.Account.CurrentAccount;
+import br.com.bytebank.bank.modelo.Account.DepositAccount;
 
 public class TestAccount {
     public static void main(String[] args) {

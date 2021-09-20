@@ -1,4 +1,4 @@
-package Account;
+package br.com.bytebank.bank.modelo.Account;
 
 public class DepositAccount extends Account {
     public DepositAccount(int agency, int number) {

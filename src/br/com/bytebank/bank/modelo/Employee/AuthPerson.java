@@ -1,4 +1,4 @@
-package Employee;
+package br.com.bytebank.bank.modelo.Employee;
 
 public abstract interface AuthPerson {
     public abstract void setPassword(int password);

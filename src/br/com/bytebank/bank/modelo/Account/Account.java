@@ -1,4 +1,4 @@
-package Account;
+package br.com.bytebank.bank.modelo.Account;
 
 public abstract class Account {
     private double funds;

@@ -1,4 +1,6 @@
-package Employee;
+package br.com.bytebank.bank.tests;
+
+import br.com.bytebank.bank.modelo.Employee.Manager;
 
 public class TestEmployee {
     public static void main(String[] args) {

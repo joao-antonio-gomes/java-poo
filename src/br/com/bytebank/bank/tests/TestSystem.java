@@ -1,7 +1,8 @@
-package RestrictSystem;
+package br.com.bytebank.bank.tests;
 
-import Employee.Admin;
-import Employee.Manager;
+import br.com.bytebank.bank.modelo.Employee.Admin;
+import br.com.bytebank.bank.modelo.Employee.Manager;
+import br.com.bytebank.bank.modelo.RestrictSystem.RestrictSystem;
 
 public class TestSystem {
     public static void main(String[] args) {

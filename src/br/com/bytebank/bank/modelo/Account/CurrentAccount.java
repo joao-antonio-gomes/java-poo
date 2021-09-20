@@ -1,6 +1,6 @@
-package Account;
+package br.com.bytebank.bank.modelo.Account;
 
-import Employee.Dutiable;
+import br.com.bytebank.bank.modelo.Employee.Dutiable;
 
 public class CurrentAccount extends Account implements Dutiable {
     public CurrentAccount(int agency, int number) {

@@ -1,9 +1,9 @@
-package Employee;
+package br.com.bytebank.bank.modelo.Employee;
 
-public class Manager extends Employee implements AuthPerson {
+public class Admin extends Employee implements AuthPerson {
     private AuthenticatorUtil authenticator;
 
-    public Manager() {
+    public Admin() {
         this.authenticator = new AuthenticatorUtil();
     }
 
@@ -19,6 +19,6 @@ public class Manager extends Employee implements AuthPerson {
 
     @Override
     public double getBonus() {
-        return 150;
+        return 50;
     }
 }

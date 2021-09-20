@@ -1,6 +1,6 @@
-package RestrictSystem;
+package br.com.bytebank.bank.modelo.RestrictSystem;
 
-import Employee.AuthPerson;
+import br.com.bytebank.bank.modelo.Employee.AuthPerson;
 
 public class RestrictSystem {
     private int password = 2222;
